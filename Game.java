@@ -19,7 +19,7 @@ public class Game
 {
     private Parser parser;
     private Room currentRoom;
-        
+    private CommandWords commandWords;
     /**
      * Create the game and initialise its internal map.
      */
@@ -27,6 +27,7 @@ public class Game
     {
         createRooms();
         parser = new Parser();
+        commandWords  = new CommandWords();
     }
 
     /**
@@ -129,10 +130,10 @@ public class Game
     private void printHelp() 
     {
         System.out.println("You are lost. You are alone. You wander");
-        System.out.println("around at the university.");
+        System.out.println("around through the university.");
         System.out.println();
         System.out.println("Your command words are:");
-        parser.showCommands();
+        System.out.println(commandWords.getAllCommands());
     }
 
     /** 
