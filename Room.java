@@ -18,7 +18,9 @@ import java.util.HashMap;
 public class Room 
 {
     private String description;
-    private HashMap<String, Room> exits;        // stores exits of this room.
+    private HashMap<String, Room> exits;
+    private Item item;
+    // stores exits of this room.
 
     /**
      * Create a room described "description". Initially, it has
@@ -31,6 +33,17 @@ public class Room
         this.description = description;
         exits = new HashMap<>();
     }
+
+    /**
+     * set an item in the room
+     */
+    public void setItem(Item item) {
+        this.item = item;
+    }
+    public Item getItem() {
+        return item;
+    }
+
 
     /**
      * Define an exit from this room.

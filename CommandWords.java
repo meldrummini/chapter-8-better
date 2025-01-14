@@ -39,7 +39,7 @@ public class CommandWords {
     }
 
     /**
-     * Print all valid commands to System.out.
+     * return a string of all valid commands
      */
     public String getAllCommands() {
         StringBuilder commands = new StringBuilder();
