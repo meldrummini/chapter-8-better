@@ -45,13 +45,15 @@ public class Game
         office = new Room("in the computing admin office");
 
         // create items
-        Item rock = new Item("a rock", 3);
-        Item Book = new Item("a book", 2);
-        Item crack = new Item("loaded crackPipe", 1);
+        Item rock = new Item("a rock", 3, "a small rock");
+        Item Book = new Item("a book", 2, "a book on Java");
+        Item crack = new Item("loaded crackPipe", 1,"a pipe with loads of fucking crack lul");
+
         // set items in rooms
         outside.setItem(rock);
         office.setItem(Book);
         lab.setItem(crack);
+
         // initialise room exits
         outside.setExit("east", theater);
         outside.setExit("south", lab);
